@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 public class Task {
-    private final String id;
+    private final Integer id;
     private String title;
     private String description;
     private LocalDate dueDate;
@@ -23,7 +23,7 @@ public class Task {
         this.tags = builder.tags;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -89,7 +89,7 @@ public class Task {
     }
 
     public static class Builder {
-        private String id;
+        private Integer id;
         private String title;
         private String description;
         private LocalDate dueDate;
@@ -97,7 +97,7 @@ public class Task {
         private Integer priority;
         private List<String> tags;
 
-        public Builder setId(String id) {
+        public Builder setId(Integer id) {
             this.id = id;
             return this;
         }
